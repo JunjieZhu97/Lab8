@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".BookDetail">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="TextView"
+        android:layout_marginTop="16dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgCoverPhoto" />
+
+    <TextView
+        android:id="@+id/tvAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        android:textStyle=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGenre" />
+
+    <TextView
+        android:id="@+id/tvPublishedYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvAuthor"
+        app:layout_constraintStart_toStartOf="@+id/tvAuthor"
+        app:layout_constraintTop_toBottomOf="@+id/tvAuthor" />
+
+    <TextView
+        android:id="@+id/tvNumberofPages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/tvPublishedYear"
+        app:layout_constraintStart_toStartOf="@+id/tvPublishedYear"
+        app:layout_constraintTop_toBottomOf="@+id/tvPublishedYear" />
+
+    <TextView
+        android:id="@+id/tvGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
+        android:textStyle="bold"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvOlanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/tvNumberofPages"
+        app:layout_constraintStart_toStartOf="@+id/tvNumberofPages"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumberofPages" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:layout_marginLeft="8dp"
+        android:textSize="15sp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOlanguage" />
+
+    <ImageView
+        android:id="@+id/imgCoverPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="fitXY"
+        app:layout_constraintHorizontal_bias="0.445"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars[0]" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:layout_margin="16dp"
+
+            android:src="@drawable/ic_edit_black_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:maxImageSize="36dp"
+            app:showMotionSpec="@android:anim/slide_out_right" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</ScrollView>
